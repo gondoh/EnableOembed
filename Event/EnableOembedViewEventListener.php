@@ -31,7 +31,7 @@ class EnableOembedViewEventListener extends BcViewEventListener {
 
 		// 管理画面のビューなら何もしない
 		$request = $View->request;
-		if (preg_match('/^admin_/', $request->action)) {
+		if (BcUtil::isAdminSystem()) {
 			return;
 		}
 
